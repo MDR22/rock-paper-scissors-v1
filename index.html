@@ -9,11 +9,13 @@
 <body>
     <script>
         //Prompt user for selection of rock, paper, or scissors
+        let userChoice = prompt("Make your selection. Choose 'rock', 'paper', or 'scissors'.");
+        console.log(userChoice);
         //Randomly generate option for computer of rock, paper, or scissors
         let computerChoiceArray = [
-            "Rock",
-            "Paper",
-            "Scissors"
+            "rock",
+            "paper",
+            "scissors"
         ];
         
         let getComputerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];
