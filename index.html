@@ -9,14 +9,16 @@
 <body>
     <script>
         //Prompt user for selection of rock, paper, or scissors
-        let userChoice = prompt("Make your selection. Choose 'rock', 'paper', or 'scissors'.");
-        let userChoiceLowerCase = userChoice.toLowerCase();
-        if (userChoiceLowerCase === "rock" || userChoiceLowerCase === "paper" || userChoiceLowerCase === "scissors") {
-            alert("Great choice!");
-        } else {
-            alert("That is not a valid choice, you fool!");
+        function getUserChoice () {
+            let userChoice = prompt("Make your selection. Choose 'rock', 'paper', or 'scissors'.");
+            let userChoiceLowerCase = userChoice.toLowerCase();
+            if (userChoiceLowerCase === "rock" || userChoiceLowerCase === "paper" || userChoiceLowerCase === "scissors") {
+                alert("Great choice!");
+            } else {
+                alert("That is not a valid choice, you fool!");
+            }
         }
-
+        
         console.log(userChoiceLowerCase);
         //Randomly generate option for computer of rock, paper, or scissors
         let computerChoiceArray = [
@@ -41,9 +43,10 @@
         //If user selection = rock and computer selection = scissors, user wins
         //If user selection = paper and computer selection = rock, user wins
         //If user selection = scissors and computer selection = paper, user wins
-        //If user selection = rock and computer selection = paper, computer wins
-        //If user selection = paper and computer selection = scissors, computer wins
-        //If user selection = scissors and computer selection = rock, computer wins
+        //All other situations, computer wins
+            //If user selection = rock and computer selection = paper, computer wins
+            //If user selection = paper and computer selection = scissors, computer wins
+            //If user selection = scissors and computer selection = rock, computer wins
         //Repeat games until user or computer wins 5 games
 
 
