@@ -10,6 +10,14 @@
     <script>
         //Prompt user for selection of rock, paper, or scissors
         //Randomly generate option for computer of rock, paper, or scissors
+        let computerChoiceArray = [
+            "Rock",
+            "Paper",
+            "Scissors"
+        ];
+        
+        let getComputerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];
+        console.log(getComputerChoice);
         //If user selection = computer selection, it is a tie game and no one wins
         //If user selection = rock and computer selection = scissors, user wins
         //If user selection = paper and computer selection = rock, user wins
@@ -18,6 +26,9 @@
         //If user selection = paper and computer selection = scissors, computer wins
         //If user selection = scissors and computer selection = rock, computer wins
         //Repeat games until user or computer wins 5 games
+
+
+
 
 
     </script>
