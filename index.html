@@ -19,16 +19,16 @@
             }
         }
         
-        console.log(userChoiceLowerCase);
         //Randomly generate option for computer of rock, paper, or scissors
-        let computerChoiceArray = [
+        function getUserChoice() {
+            let computerChoiceArray = [
             "rock",
             "paper",
             "scissors"
         ];
-        
-        let getComputerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];
-        console.log(getComputerChoice);
+            let getComputerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];    
+        }
+
         //Create results for various game outcomes
         function determineWinner() {
             if (userChoiceLowerCase === getComputerChoice) {
