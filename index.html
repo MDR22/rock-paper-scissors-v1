@@ -10,17 +10,18 @@
     <script>
         //Prompt user for selection of rock, paper, or scissors
         function getUserChoice () {
-            let userChoice = prompt("Make your selection. Choose 'rock', 'paper', or 'scissors'.");
-            let userChoiceLowerCase = userChoice.toLowerCase();
-            if (userChoiceLowerCase === "rock" || userChoiceLowerCase === "paper" || userChoiceLowerCase === "scissors") {
-                alert("Great choice!");
-            } else {
-                alert("That is not a valid choice, you fool!");
-            }
+            const userChoice = prompt("Make your selection. Choose 'rock', 'paper', or 'scissors'.");
+            const userChoiceLowerCase = userChoice.toLowerCase();
+            return userChoiceLowerCase;
+        //     if (userChoiceLowerCase === "rock" || userChoiceLowerCase === "paper" || userChoiceLowerCase === "scissors") {
+        //        return userChoiceLowerCase
+        //     } else {
+        //         return alert("That is not a valid choice, you fool!");
+        //     }
         }
         
         //Randomly generate option for computer of rock, paper, or scissors
-        function getUserChoice() {
+        function getComputerChoice() {
             let computerChoiceArray = [
             "rock",
             "paper",
