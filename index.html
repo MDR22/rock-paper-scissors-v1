@@ -10,6 +10,12 @@
     <script>
         //Prompt user for selection of rock, paper, or scissors
         let userChoice = prompt("Make your selection. Choose 'rock', 'paper', or 'scissors'.");
+        if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors") {
+            alert("Great choice!");
+        } else {
+            alert("That is not a valid choice, you fool!")
+        }
+
         console.log(userChoice);
         //Randomly generate option for computer of rock, paper, or scissors
         let computerChoiceArray = [
