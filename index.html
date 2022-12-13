@@ -27,6 +27,16 @@
         
         let getComputerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];
         console.log(getComputerChoice);
+        //Create results for various game outcomes
+        function determineWinner() {
+            if (userChoiceLowerCase === getComputerChoice) {
+                return alert("It's a tie - you both lose!");
+            } else if (userChoiceLowerCase === "rock" && getComputerChoice === "scissors" || userChoiceLowerCase === "paper" && getComputerChoice === "rock" || userChoiceLowerCase === "scissors" && getComputerChoice === "paper") {
+                return alert("Winner winner chicken dinner!");
+            } else {
+                return alert("You LOSE you LOSER!");
+            }
+        }
         //If user selection = computer selection, it is a tie game and no one wins
         //If user selection = rock and computer selection = scissors, user wins
         //If user selection = paper and computer selection = rock, user wins
