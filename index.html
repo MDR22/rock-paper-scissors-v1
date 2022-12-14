@@ -27,14 +27,15 @@
             "paper",
             "scissors"
         ];
-            let getComputerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];    
+            const computerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)];
+            return computerChoice;    
         }
 
         //Create results for various game outcomes
         function determineWinner() {
-            if (userChoiceLowerCase === getComputerChoice) {
+            if (getUserChoice === getComputerChoice) {
                 return alert("It's a tie - you both lose!");
-            } else if (userChoiceLowerCase === "rock" && getComputerChoice === "scissors" || userChoiceLowerCase === "paper" && getComputerChoice === "rock" || userChoiceLowerCase === "scissors" && getComputerChoice === "paper") {
+            } else if (getUserChoice === "rock" && getComputerChoice === "scissors" || getUserChoice === "paper" && getComputerChoice === "rock" || getUserChoice === "scissors" && getComputerChoice === "paper") {
                 return alert("Winner winner chicken dinner!");
             } else {
                 return alert("You LOSE you LOSER!");
