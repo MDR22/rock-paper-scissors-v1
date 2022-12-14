@@ -31,11 +31,14 @@
             return computerChoice;    
         }
 
+        const userChoice = getUserChoice();
+        const computerChoice = getComputerChoice();
+
         //Create results for various game outcomes
-        function determineWinner() {
-            if (getUserChoice === getComputerChoice) {
+        function determineWinner(userChoice, computerChoice) {
+            if (UserChoice === computerChoice) {
                 return alert("It's a tie - you both lose!");
-            } else if (getUserChoice === "rock" && getComputerChoice === "scissors" || getUserChoice === "paper" && getComputerChoice === "rock" || getUserChoice === "scissors" && getComputerChoice === "paper") {
+            } else if (userChoice === "rock" && computerChoice === "scissors" || userChoice === "paper" && computerChoice === "rock" || userChoice === "scissors" && computerChoice === "paper") {
                 return alert("Winner winner chicken dinner!");
             } else {
                 return alert("You LOSE you LOSER!");
